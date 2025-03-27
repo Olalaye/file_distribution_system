@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件分发系统</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>文件分发系统</h1>
+        </header>
+        
+        <main>
+            <section class="upload-section">
+                <h2>文件上传</h2>
+                <form id="uploadForm" enctype="multipart/form-data" class="form-group">
+                    <div class="file-input-wrapper">
+                        <input type="file" name="file" id="fileInput" class="file-input">
+                        <label for="fileInput" class="file-label">选择文件</label>
+                    </div>
+                    <div id="filePreview" class="file-preview"></div>
+                    <button type="submit" class="btn primary">上传文件</button>
+                </form>
+            </section>
+
+            <section class="query-section">
+                <h2>文件查询</h2>
+                <form id="queryByMd5Form" class="form-group">
+                    <input type="text" name="md5" placeholder="输入 MD5 进行查询" class="text-input">
+                    <button type="submit" class="btn secondary">MD5查询</button>
+                </form>
+
+                <form id="queryByFileForm" enctype="multipart/form-data" class="form-group">
+                    <div class="file-input-wrapper">
+                        <input type="file" name="file" id="queryFileInput" class="file-input">
+                        <label for="queryFileInput" class="file-label">选择文件</label>
+                    </div>
+                    <div id="queryFilePreview" class="file-preview"></div>
+                    <button type="submit" class="btn secondary">文件查询</button>
+                </form>
+
+                <button onclick="listQuery()" class="btn info">文件列表</button>
+            </section>
+
+            <section class="result-section">
+                <div id="result" class="result-container"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

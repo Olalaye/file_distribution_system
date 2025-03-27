@@ -1,0 +1,240 @@
+/* 全局样式重置和基础设置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* MD5等宽字体设置 */
+.result-item p, table td:nth-child(2) {
+    font-family: Consolas, Monaco, 'Courier New', monospace;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    color: #34495e;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 表单样式 */
+.form-group {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.file-input-wrapper {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.file-input {
+    position: absolute;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.file-label {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #e9ecef;
+    color: #495057;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.file-label:hover {
+    background-color: #dde2e6;
+}
+
+.file-preview {
+    margin: 1rem 0;
+}
+
+.selected-file {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+.text-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.text-input:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+/* 文件图标样式 */
+.file-icon {
+    margin-right: 8px;
+    color: #666;
+    font-size: 1.1em;
+}
+
+/* 按钮样式 */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn.primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn.primary:hover {
+    background-color: #0056b3;
+}
+
+.btn.secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn.secondary:hover {
+    background-color: #545b62;
+}
+
+.btn.info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.btn.info:hover {
+    background-color: #138496;
+}
+
+/* 结果展示区域 */
+.result-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 表格样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    table-layout: auto;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+    vertical-align: top;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.filenames-cell {
+    max-width: 300px;
+}
+
+.filenames-cell div {
+    margin-bottom: 0.5rem;
+    word-break: break-all;
+    white-space: normal;
+}
+
+.filenames-list {
+    margin-top: 1rem;
+}
+
+.filenames-list ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.filenames-list li {
+    margin-bottom: 0.5rem;
+    word-break: break-all;
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 280px;
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .form-group {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    th, td {
+        padding: 0.75rem;
+    }
+}
